@@ -1,6 +1,6 @@
 === IFrame Widget ===
 Contributors: debashish
-Donate link: http://nullpointer.debashish.com/iframe-widget-for-wordpress
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8SDLHNYUDZ8TY&lc=US&item_name=Wordpress%20IFrame%20Widget&item_number=iframe%2dwidget&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: iframe,widget
 Requires at least: 2.0.2
 Tested up to: 2.6.1
