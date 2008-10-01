@@ -1,18 +1,15 @@
-=== Plugin Name ===
+=== IFrame Widget ===
 Contributors: debashish
-Donate link: http://example.com/
+Donate link: http://nullpointer.debashish.com/iframe-widget-for-wordpress
 Tags: iframe,widget
 Requires at least: 2.0.2
 Tested up to: 2.6.1
-Stable tag: 2.0
+Stable tag: 1.0
 
-Here is a short description of the plugin.  This should be no more than 150 chars.  No markup here.
+IFrame widget can display any external HTML page inside an HTML IFrame component.
 
 == Description ==
-This simple IFrame widget can display any external HTML page inside an http://www.htmlhelp.com/reference/html40/special/iframe.html "HTML IFrame" component. The need 
-came from the Hindi Tagcloud JSP that I had once created for http://www.myjavaserver.com/~hindi "Chittha Vishwa" and I always thought that 
-there should be some way to display that page on my blog (if you are as lazy to edit your blog theme 
-files, you would agree with me).
+This simple IFrame widget can display any external HTML page inside an [HTML IFrame] (http://www.htmlhelp.com/reference/html40/special/iframe.html "Know more about IFrames") component. The need came from the Hindi Tagcloud JSP that I had once created for [Chittha Vishwa] (http://www.myjavaserver.com/~hindi "Chittha Vishwa, Hindi for World of Blogs, is the first ever Hindi blog aggregator") and I always thought that there should be some way to display that page on my blog (if you are as lazy to edit your blog theme files, you would agree with me).
 
 == Installation ==
 
@@ -31,5 +28,5 @@ If the dimension of the webpage you are trying to display within the IFrame exce
 
 == Screenshots ==
 
-1. Configure your IFrame. screenshot-1.jpg 
-2. This is how the widget looks like on sidebar after configuration. screenshot-2.jpg 
+1. Configure your IFrame. 
+2. This is how the widget looks like on sidebar after configuration. 
