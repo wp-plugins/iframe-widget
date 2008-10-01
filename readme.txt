@@ -9,7 +9,7 @@ Stable tag: 1.0
 IFrame widget can display any external HTML page inside an HTML IFrame component.
 
 == Description ==
-This simple IFrame widget can display any external HTML page inside an [HTML IFrame] (http://www.htmlhelp.com/reference/html40/special/iframe.html "Know more about IFrames") component. The need came from the Hindi Tagcloud JSP that I had once created for [Chittha Vishwa] (http://www.myjavaserver.com/~hindi "Chittha Vishwa, Hindi for World of Blogs, is the first ever Hindi blog aggregator") and I always thought that there should be some way to display that page on my blog (if you are as lazy to edit your blog theme files, you would agree with me).
+This simple IFrame widget can display any external HTML page inside an [HTML IFrame](http://www.htmlhelp.com/reference/html40/special/iframe.html "Know more about IFrames") component. The need came from the Hindi Tagcloud JSP that I had once created for [Chittha Vishwa](http://www.myjavaserver.com/~hindi "Chittha Vishwa, Hindi for World of Blogs, is the first ever Hindi blog aggregator") and I always thought that there should be some way to display that page on my blog (if you are as lazy to edit your blog theme files, you would agree with me).
 
 == Installation ==
 
