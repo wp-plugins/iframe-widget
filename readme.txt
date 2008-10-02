@@ -1,7 +1,7 @@
 === IFrame Widget ===
 Contributors: debashish
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8SDLHNYUDZ8TY&lc=US&item_name=Wordpress%20IFrame%20Widget&item_number=iframe%2dwidget&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
-Tags: iframe,widget
+Tags: iframe,widget,HTML,iframe-widget
 Requires at least: 2.0.2
 Tested up to: 2.6.1
 Stable tag: 1.0
@@ -15,7 +15,8 @@ This simple IFrame widget can display any external HTML page inside an [HTML IFr
 
 Its a child's play to install the IFrame Widget and get it working.
 
-1. Upload `iframe-widget.php` to the `/wp-content/plugins/` directory
+1. Download and unzip iframe-widget.zip 
+1. Upload the folder containing `iframe-widget.php` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Go to Design > Widgets and Add the 'IFrame Widget" to desired sidebar.
 1. Configure the IFrame Title, Dimensions and URL and save your changes.
