@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8SDLH
 Tags: iframe,widget,HTML,iframe-widget
 Requires at least: 2.0.2
 Tested up to: 2.6.1
-Stable tag: 1.0
+Stable tag: 2.0
 
 IFrame widget can display any external HTML page inside an HTML IFrame component.
 
