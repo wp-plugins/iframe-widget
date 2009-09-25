@@ -1,10 +1,10 @@
 === IFrame Widget ===
 Contributors: debashish
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8SDLHNYUDZ8TY&lc=US&item_name=Wordpress%20IFrame%20Widget&item_number=iframe%2dwidget&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=P65K7JVX4EXP6&lc=IN&item_name=Wordpress%20Plugin&item_number=iframe%2dwidget&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
 Tags: iframe,widget,HTML,iframe-widget
 Requires at least: 2.3
-Tested up to: 2.6.1
-Stable tag: 2.0
+Tested up to: 2.8
+Stable tag: 3.0
 
 IFrame widget can display any external HTML page inside an HTML IFrame component.
 
@@ -21,7 +21,7 @@ This simple IFrame widget can display any external HTML page inside an [HTML IFr
 
 == Frequently Asked Questions ==
 
-= I see a scrollbar around the webpage on the IFrame =
+= I see a scroll-bar around the webpage on the IFrame =
 
 If the dimension of the webpage you are trying to display within the IFrame exceeds the configured dimension of the IFrame it will automatically add scrollbars. Try to include a webpage that could fit within the IFrame.
 
@@ -48,5 +48,6 @@ Unfortunately no. As of now you can only add one instance of IFrame Widget on si
 
 == Changelog ==
 
+*	**3.0**: Bug fix: is_nan changed to is_numeric (Thanks eddan). Paypal link corrected. Tested on Wordpress 2.8.
 *	**2.0**: New feature: Multiple IFrames can now be added on Wordpress Posts and Pages.
 *	**1.0**: Initial public release.

@@ -3,7 +3,7 @@
 Plugin Name: IFrame Widget
 Plugin URI: http://nullpointer.debashish.com/iframe-widget-for-wordpress
 Description: Adds an IFrame on your sidebar or any page to display any desired webpage.
-Version: 2.0
+Version: 3.0
 Author: Debashish Chakrabarty
 Author URI: http://www.debashish.com
 
@@ -98,10 +98,10 @@ function widget_iframe_on_page($text){
 		//Read the Width/Height Parameters, if given
 	    $param = explode(",", $text[1]);
 		$others = "";
-		if(isset($param[1]) && is_nan($param[1])){
+		if(isset($param[1]) && is_numeric($param[1])){
 			$others = ' width="' .$param[1] . '"';
 		}
-		if(isset($param[2]) && is_nan($param[2])){
+		if(isset($param[2]) && is_numeric($param[2])){
 			$others .= ' height="' .$param[2] . '"';
 		}
 		//generate the IFRAME tag
