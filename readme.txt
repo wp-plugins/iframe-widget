@@ -1,53 +1,61 @@
 === IFrame Widget ===
 Contributors: debashish
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=P65K7JVX4EXP6&lc=IN&item_name=Wordpress%20Plugin&item_number=iframe%2dwidget&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
 Tags: iframe,widget,HTML,iframe-widget
-Requires at least: 2.3
-Tested up to: 2.8
-Stable tag: 3.0
+Requires at least: 3.0
+Tested up to: 3.4.2
+Stable tag: 4.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 IFrame widget can display any external HTML page inside an HTML IFrame component.
 
 == Description ==
-This simple IFrame widget can display any external HTML page inside an [HTML IFrame](http://www.htmlhelp.com/reference/html40/special/iframe.html "Know more about IFrames") component. The need came from the Hindi Tagcloud JSP that I had once created for [Chittha Vishwa](http://www.myjavaserver.com/~hindi "Chittha Vishwa, Hindi for World of Blogs, is the first ever Hindi blog aggregator") and I always thought that there should be some way to display that page on my blog (if you are as lazy to edit your blog theme files, you would agree with me).
+This simple IFrame widget can display any external HTML page inside an [HTML IFrame](http://www.w3.org/TR/html4/present/frames.html#edef-IFRAME "Know more about IFrames") component. The need came from the Hindi Tagcloud JSP that I had once created for [Chittha Vishwa](http://www.myjavaserver.com/~hindi "Chittha Vishwa, Hindi for World of Blogs, is the first ever Hindi blog aggregator") and I always thought that there should be some way to display that page on my blog (if you are as lazy to edit your blog theme files, you would agree with me).
 
 == Installation ==
-
 1. Download and unzip iframe-widget.zip 
 1. Upload the folder containing `iframe-widget.php` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. To add an IFrame on a sidebar, browse to Design > Widgets and add the 'IFrame Widget" to desired sidebar. Configure the IFrame Title, Dimensions and URL and save your changes.
-1. To add IFrames to any post or page just add the markup `[dciframe]url,width,height[/dciframe]`, for instance `[dciframe]http://www.google.com,400,250[/dciframe]`.
+1. To add an IFrame on a sidebar, browse to Appearance > Widgets and add the 'IFrame Widget" to desired sidebar. Configure the parameters such as IFrame Title, Dimensions, URL etc and save your changes.
+1. To add IFrames to any post or page just add the markup `[dciframe]url,width,height,frameborder,style[/dciframe]`, for instance `[dciframe]http://www.google.com,50%,50%,1,border:1px solid red;[/dciframe]`.
 
 == Frequently Asked Questions ==
 
-= I see a scroll-bar around the webpage on the IFrame =
+= How can I  change scroll-bar around the webpage on the IFrame? =
 
-If the dimension of the webpage you are trying to display within the IFrame exceeds the configured dimension of the IFrame it will automatically add scrollbars. Try to include a webpage that could fit within the IFrame.
+If the dimension of the webpage you are trying to display within the IFrame exceeds the configured dimension of the IFrame (by default) will automatically add scrollbars. This option can be changed, using the "Display Scroll bars?" configuration option, you may chose to either display the scroll-bar always, or not at all or select "auto" to let IFrame decide whether to show the horizontal and/or vertical scroll-bar.
 
-= I don't see any border around my IFrame =
+= How do I add border to my IFrame? =
 
-Borders have been deliberately turned off in the plugin. If you want to get rid of this you may edit the `iframe-widget.php` and remove all occurances of the HTML code `frameborder="0"`.
+To add a border to your IFrame Widget, select the option "Yes" as answer to "Display Frame border?". Then add the required style information in the "CSS Style" field (example: you may add 
+`border:1px solid red;`). If you are using the `[dciframe]` Markup then you may similarly supply the parameters as `[dciframe]http://www.google.com,400,250,1,border:1px solid red;[/dciframe]`, for example (note that the fourth parameter value for `frameborder` has been set to "1").
 
-= How do I add an IFrame to a blog-post =
+= How do I add an IFrame to a blog-post or Page? =
 
-To add IFrames to any post or page just add the markup `[dciframe]url,width,height[/dciframe]`, for instance `[dciframe]http://www.google.com,400,250[/dciframe]`. Note that supplying the URL is mandatory while the width and height parameters are optional. Which means that you may specify only the URL or only the URL & width. Therefore, `[dciframe]http://www.google.com,400[/dciframe]` and `[dciframe]http://www.google.com[/dciframe]` are valid tags. Also note that the order of width & height is important and URL, Width and Height must be separated with commas. Lastly, the closing tag `[/dciframe]` is mandatory.
+To add IFrames to any post or page just add the markup `[dciframe]url,width,height,frameborder,style[/dciframe]`, for instance `[dciframe]http://www.google.com,400,250,1,border:1px solid red;[/dciframe]`. 
+
+Note that supplying the URL is mandatory while other parameters are optional; which means that you may specify only the URL or only the URL & width. Therefore, `[dciframe]http://www.google.com,400[/dciframe]` and `[dciframe]http://www.google.com[/dciframe]` are valid tags. Also note that the order of the parameters is important and URL, Width, Height, Frameborder and style must be separated with commas. Lastly, the closing tag `[/dciframe]` is mandatory.
 
 = Can I add multiple IFrames on a Post or Page? =
 
-Yes you can. Just add multiple `[dciframe]` tags where required. All of these can be configured independently.
-
-= Can I add multiple IFrame Widgets on sidebar? =
-
-Unfortunately no. As of now you can only add one instance of IFrame Widget on sidebar.
+Yes you can. Just add multiple `[dciframe]` tags where required when using the markup or drop the "IFrame Widget" on your sidebars, as needed [See the [screen shot](http://wordpress.org/extend/plugins/iframe-widget/screenshots/ "Screenshots") section for a screen-grab of multiple widgets in action]. All of these can be configured independently.
 
 == Screenshots ==
 
-1. Configure your IFrame. 
-2. This is how the widget looks like on sidebar after configuration. 
+1. Configuration for the IFrame Sidebar Widget.
+2. Example of IFrame Widget markup being used on a page. 
+2. Example of multiple instances of the IFrame Widget & Markups. 
 
 == Changelog ==
 
-*	**3.0**: Bug fix: is_nan changed to is_numeric (Thanks eddan). Paypal link corrected. Tested on Wordpress 2.8.
-*	**2.0**: New feature: Multiple IFrames can now be added on Wordpress Posts and Pages.
-*	**1.0**: Initial public release.
+= 4.0 =
+* Rewrite of the plugin to the new Widget API (thus adding the facility to add multiple instances of IFrame sidecar-widgets). New Parameters Style, Frameborder and Scrolling added.
+
+= 3.0 = 
+* Bug fix: is_nan changed to is_numeric (Thanks eddan). Paypal link corrected. Tested on Wordpress 2.8.
+
+= 2.0 = 
+* New feature: Multiple IFrames can now be added on Wordpress Posts and Pages.
+
+= 1.0 =
+* Initial public release.
