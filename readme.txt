@@ -23,12 +23,11 @@ This simple IFrame widget can display any external HTML page inside an [HTML IFr
 
 = How can I  change scroll-bar around the webpage on the IFrame? =
 
-If the dimension of the webpage you are trying to display within the IFrame exceeds the configured dimension of the IFrame (by default) will automatically add scrollbars. This option can be changed, using the "Display Scroll bars?" configuration option, you may chose to either display the scroll-bar always, or not at all or select "auto" to let IFrame decide whether to show the horizontal and/or vertical scroll-bar.
+If the dimension of the webpage you are trying to display within the IFrame exceeds the configured dimension of the IFrame (by default) will automatically add scrollbars. This option can be changed, using the "Display Scroll bars?" configuration option, you may chose to either display the scroll-bar always, or not at all or select `auto` to let IFrame decide whether to show the horizontal and/or vertical scroll-bar.
 
 = How do I add border to my IFrame? =
 
-To add a border to your IFrame Widget, select the option "Yes" as answer to "Display Frame border?". Then add the required style information in the "CSS Style" field (example: you may add 
-`border:1px solid red;`). If you are using the `[dciframe]` Markup then you may similarly supply the parameters as `[dciframe]http://www.google.com,400,250,1,border:1px solid red;[/dciframe]`, for example (note that the fourth parameter value for `frameborder` has been set to "1").
+To add a border to your IFrame Widget, select the option "Yes" as answer to "Display Frame border?". Then add the required style information in the "CSS Style" field (example: you may add `border:1px solid red;`). If you are using the `[dciframe]` Markup then you may similarly supply the parameters as `[dciframe]http://www.google.com,400,250,1,border:1px solid red;[/dciframe]`, for example (note that the fourth parameter value for `frameborder` has been set to "1").
 
 = How do I add an IFrame to a blog-post or Page? =
 
@@ -49,13 +48,16 @@ Yes you can. Just add multiple `[dciframe]` tags where required when using the m
 == Changelog ==
 
 = 4.0 =
-* Rewrite of the plugin to the new Widget API (thus adding the facility to add multiple instances of IFrame sidecar-widgets). New Parameters Style, Frameborder and Scrolling added.
+* Rewrite of the plugin to the new Widget API (thus adding the facility to add multiple instances of IFrame sidebar-widgets). New Parameters Style, Frameborder and Scrolling added.
 
 = 3.0 = 
 * Bug fix: is_nan changed to is_numeric (Thanks eddan). Paypal link corrected. Tested on Wordpress 2.8.
 
 = 2.0 = 
-* New feature: Multiple IFrames can now be added on Wordpress Posts and Pages.
+* New feature: Multiple IFrames can now be added on Wordpress Posts and Pages using the Markup option.
 
 = 1.0 =
 * Initial public release.
+
+== Upgrade Notice ==
+* We strongly recommend upgrading to V4.0. There are new features to savor. Note that you may loose any configuration of previously set Widgets after the upgrade and would need to re-configure your widgets.
