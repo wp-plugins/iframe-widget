@@ -112,7 +112,7 @@ class iframe_settings {
 			echo "<h2>Copy-Paste the following Markup to your page where you wish to display the IFrame:</h2>";
 			echo '<textarea style="width:600px;height:60px;font-family:courier;font-size:16px;" name="markup" id="markup">';
 			printf('[dciframe]%s,%s,%s,%s,%s,%s[/dciframe]', $url, $width, $height, $border, $scrolling, $style);
-			echo "</textarea>":
+			echo "</textarea>";
 		}
 		else {
 			echo "<p><font color=red>Markup cannot be generated without a URL.</font></p>";
