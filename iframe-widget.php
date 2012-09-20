@@ -3,15 +3,17 @@
 Plugin Name: IFrame Widget
 Plugin URI: http://nullpointer.debashish.com/iframe-widget-for-wordpress
 Description: Adds an IFrame on your sidebar or any page to display any desired webpage.
-Version: 4.0
+Version: 4.1
 Min WP Version: 3.0
 Author: Debashish Chakrabarty
 Author URI: http://www.debashish.com
 */
 ?>
 <?php
+include ("iframe-markup-generator.php");
 add_action('widgets_init', create_function('', 'return register_widget("IFrame_Widget");'));
 add_filter('the_content', 'widget_iframe_on_page', 10, 1);
+add_filter( 'plugin_action_links', 'iframe_plugin_action_links', 10, 2 );
 
 class IFrame_Widget extends WP_Widget {
 
@@ -100,28 +102,41 @@ class IFrame_Widget extends WP_Widget {
 }
 
 //Converts all the occurances of [dciframe][/dciframe] to IFRAME HTML tags
-	function widget_iframe_on_page($text){
-		$regex = '#\[dciframe]((?:[^\[]|\[(?!/?dciframe])|(?R))+)\[/dciframe]#';
-		if (is_array($text)) {
-			//Read the Width/Height Parameters, if given
-			$param = explode(",", $text[1]);
-			$others = "";
-			if(isset($param[1])){
-				$others = ' width="' .$param[1] . '"';
-			}
-			if(isset($param[2])){
-				$others .= ' height="' .$param[2] . '"';
-			}
-			if(isset($param[3]) && is_numeric($param[3])){
-				$others .= ' frameborder="' .$param[3] . '"';
-			}
-			if(isset($param[4])){
-				$others .= ' style="' .$param[4] . '"';
-			}
-			
-			//generate the IFRAME tag
-			$text = '<iFrame src="'.$param[0].'"'.$others.'></iFrame>';
+function widget_iframe_on_page($text){
+	$regex = '#\[dciframe]((?:[^\[]|\[(?!/?dciframe])|(?R))+)\[/dciframe]#';
+	if (is_array($text)) {
+		//Read the Width/Height Parameters, if given
+		$param = explode(",", $text[1]);
+		$others = "";
+		if(isset($param[1])){
+			$others = ' width="' .$param[1] . '"';
 		}
-		return preg_replace_callback($regex, 'widget_iframe_on_page', $text);
+		if(isset($param[2])){
+			$others .= ' height="' .$param[2] . '"';
+		}
+		if(isset($param[3]) && is_numeric($param[3])){
+			$others .= ' frameborder="' .$param[3] . '"';
+		}
+		if(isset($param[4])){
+			$others .= ' scrolling="' .$param[4] . '"';
+		}
+		if(isset($param[5])){
+			$others .= ' style="' .$param[5] . '"';
+		}
+		
+		//generate the IFRAME tag
+		$text = '<iFrame src="'.$param[0].'"'.$others.'></iFrame>';
 	}
+	return preg_replace_callback($regex, 'widget_iframe_on_page', $text);
+}
+	
+// Display a Settings link on the main Plugins page
+function iframe_plugin_action_links( $links, $file ) {
+	if ( $file == plugin_basename( __FILE__ ) ) {
+		$iframe_links = '<a href="'.get_admin_url().'options-general.php?page=iframe_settings_display">'.__('Generator').'</a>';
+		// make the 'Settings' link appear first
+		array_unshift( $links, $iframe_links );
+	}
+	return $links;
+}
 ?>
